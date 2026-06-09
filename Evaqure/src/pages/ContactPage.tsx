@@ -42,7 +42,7 @@ export const ContactPage: React.FC = () => {
     <div className="contact-page container">
       <div className="contact-layout">
         {/* Left Column: Info & Locations */}
-        <div className="contact-info-col">
+        <div className="contact-info-col reveal-left">
           <span className="section-subtitle">Client Services</span>
           <h1>Get in Touch</h1>
           <p>
@@ -50,28 +50,28 @@ export const ContactPage: React.FC = () => {
           </p>
 
           <div className="contact-details-grid">
-            <div className="boutique-card">
+            <div className="boutique-card reveal reveal-delay-1">
               <h3>Direct Contacts</h3>
               <p>Client Concierge: care@evaqure.com</p>
               <p>Bespoke Inquiries: private@evaqure.com</p>
               <p>Tel: +91 80 4960 1200</p>
             </div>
 
-            <div className="boutique-card">
+            <div className="boutique-card reveal reveal-delay-2">
               <h3>Bengaluru Laboratory</h3>
               <p>12 Rajajinagar Industrial Area</p>
               <p>Bengaluru, KA 560010</p>
               <p>Mon &mdash; Sat, 09:00 &mdash; 18:00</p>
             </div>
 
-            <div className="boutique-card">
+            <div className="boutique-card reveal reveal-delay-3">
               <h3>Mumbai Space</h3>
               <p>Juhu Tara Road, Juhu</p>
               <p>Mumbai, MH 400049</p>
               <p>By Appointment Only</p>
             </div>
 
-            <div className="boutique-card">
+            <div className="boutique-card reveal reveal-delay-4">
               <h3>New Delhi Atelier</h3>
               <p>One Style Mile, Mehrauli</p>
               <p>New Delhi, DL 110030</p>
@@ -81,7 +81,7 @@ export const ContactPage: React.FC = () => {
         </div>
 
         {/* Right Column: Contact Form */}
-        <div className="contact-form-col">
+        <div className="contact-form-col reveal-right">
           <h2>Private Inquiry</h2>
           {submitted ? (
             <div style={{ textAlign: 'center', padding: 'var(--space-xl) 0' }}>
@@ -134,7 +134,7 @@ export const ContactPage: React.FC = () => {
       </div>
 
       {/* FAQ Accordion */}
-      <section className="faq-section">
+      <section className="faq-section reveal">
         <span className="section-subtitle" style={{ display: 'block', textAlign: 'center', marginBottom: 'var(--space-xs)' }}>
           Assistance Directory
         </span>

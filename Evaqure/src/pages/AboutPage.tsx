@@ -10,7 +10,7 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="about-page container">
       {/* Editorial Hero Title */}
-      <section className="about-hero">
+      <section className="about-hero reveal">
         <span className="section-subtitle" style={{ marginBottom: 'var(--space-xs)', display: 'block' }}>
           Our Heritage
         </span>
@@ -22,7 +22,7 @@ export const AboutPage: React.FC = () => {
 
       {/* Split Section 1 */}
       <section className="about-split-section">
-        <div className="about-text-content">
+        <div className="about-text-content reveal-left">
           <span className="section-subtitle">Generational Sourcing</span>
           <h2>Ethical Indian Cultivation</h2>
           <p>
@@ -32,7 +32,7 @@ export const AboutPage: React.FC = () => {
             By supporting local farming cooperatives and utilizing advanced clean extraction methods, we deliver premium skin nutrition that respects both nature and the skin barrier.
           </p>
         </div>
-        <div className="about-image-container">
+        <div className="about-image-container reveal-right">
           <img
             src={heritageImage}
             alt="Evaqure Skincare Heritage"
@@ -43,13 +43,13 @@ export const AboutPage: React.FC = () => {
       {/* Founder's Vision Section */}
       <section className="founder-vision-section">
         <div className="founder-vision-container">
-          <div className="founder-portrait-column">
+          <div className="founder-portrait-column reveal-left">
             <div className="founder-image-frame">
               <img src={modelImage} alt="Khushnuma Rayeen, Founder of Evaqure" />
               <div className="frame-accent-border"></div>
             </div>
           </div>
-          <div className="founder-letter-column">
+          <div className="founder-letter-column reveal-right">
             <span className="section-subtitle">Founder's Journal</span>
             <h2>"Skincare is an act of preservation, not correction."</h2>
             <div className="founder-letter-body">
@@ -76,13 +76,13 @@ export const AboutPage: React.FC = () => {
 
       {/* Split Section 2 */}
       <section className="about-split-section reverse">
-        <div className="about-image-container">
+        <div className="about-image-container reveal-left">
           <img
             src={honestImpressions}
             alt="Evaqure Skincare Packaging"
           />
         </div>
-        <div className="about-text-content">
+        <div className="about-text-content reveal-right">
           <span className="section-subtitle">Conscious Luxury</span>
           <h2>Honest Intentions</h2>
           <p>

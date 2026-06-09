@@ -63,7 +63,7 @@ export const ShopPage: React.FC = () => {
   return (
     <div className="shop-page container">
       {/* Title Banner */}
-      <div className="shop-page-title-banner">
+      <div className="shop-page-title-banner reveal">
         <h1>The Collections</h1>
         <p>A fine collection of luxury garments, signature scents, and handcrafted statements.</p>
       </div>
@@ -71,7 +71,7 @@ export const ShopPage: React.FC = () => {
       {/* Main Layout */}
       <div className="shop-layout">
         {/* Sidebar Filters */}
-        <aside className="shop-sidebar">
+        <aside className="shop-sidebar reveal-left">
           {/* Category Filter */}
           <div className="filter-group">
             <h3 className="filter-title">Collections</h3>
@@ -135,7 +135,7 @@ export const ShopPage: React.FC = () => {
         {/* Results Panel */}
         <main className="shop-results">
           {/* Info Header */}
-          <div className="shop-results-header">
+          <div className="shop-results-header reveal">
             <span>
               Showing {filteredProducts.length} {filteredProducts.length === 1 ? 'item' : 'items'}
               {searchQuery && ` for "${searchQuery}"`}
@@ -153,8 +153,10 @@ export const ShopPage: React.FC = () => {
             </div>
           ) : (
             <div className="shop-products-grid">
-              {filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
+              {filteredProducts.map((product, index) => (
+                <div key={product.id} className={`reveal reveal-delay-${(index % 5) + 1}`}>
+                  <ProductCard product={product} />
+                </div>
               ))}
             </div>
           )}

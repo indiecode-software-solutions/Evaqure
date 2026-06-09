@@ -93,6 +93,45 @@
   margin-top: var(--space-sm);
 }
 
+/* Staggered Hero Load Animation */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-subtitle {
+    opacity: 0;
+    animation: heroTextFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.2s;
+  }
+
+  .hero-title {
+    opacity: 0;
+    animation: heroTextFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.4s;
+  }
+
+  .hero-description {
+    opacity: 0;
+    animation: heroTextFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.6s;
+  }
+
+  .hero-actions {
+    opacity: 0;
+    animation: heroTextFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.8s;
+  }
+
+  @keyframes heroTextFadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
 /* Home Section General Layout */
 .home-section {
   padding: var(--space-huge) 0;

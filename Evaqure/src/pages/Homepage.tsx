@@ -145,14 +145,14 @@ export const Homepage: React.FC = () => {
 
       {/* Product Categories */}
       <section className="home-section container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <span className="section-subtitle">Curated Chapters</span>
           <h2 className="section-title">Shop by Category</h2>
         </div>
 
         <div className="categories-grid">
           {/* Serums */}
-          <div className="category-card" onClick={() => { setSelectedCategory('Serums'); navigateTo('shop'); }}>
+          <div className="category-card reveal reveal-delay-1" onClick={() => { setSelectedCategory('Serums'); navigateTo('shop'); }}>
             <img
               src={serum1}
               alt="Serums Collection"
@@ -166,7 +166,7 @@ export const Homepage: React.FC = () => {
           </div>
 
           {/* Moisturizers */}
-          <div className="category-card" onClick={() => { setSelectedCategory('Moisturizers'); navigateTo('shop'); }}>
+          <div className="category-card reveal reveal-delay-2" onClick={() => { setSelectedCategory('Moisturizers'); navigateTo('shop'); }}>
             <img
               src={moisturizerBanner}
               alt="Moisturizers Collection"
@@ -180,7 +180,7 @@ export const Homepage: React.FC = () => {
           </div>
 
           {/* Toners */}
-          <div className="category-card" onClick={() => { setSelectedCategory('Toners'); navigateTo('shop'); }}>
+          <div className="category-card reveal reveal-delay-3" onClick={() => { setSelectedCategory('Toners'); navigateTo('shop'); }}>
             <img
               src={toner1}
               alt="Toners Collection"
@@ -200,7 +200,7 @@ export const Homepage: React.FC = () => {
       {/* Brand Story Section */}
       <section className="home-section container">
         <div className="brand-story-wrapper">
-          <div className="brand-story-text">
+          <div className="brand-story-text reveal-left">
             <span className="section-subtitle">Our Heritage</span>
             <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: 'var(--space-sm)' }}>
               Botanical alchemy, guided by cellular science.
@@ -219,7 +219,7 @@ export const Homepage: React.FC = () => {
               Read the Manifesto
             </button>
           </div>
-          <div className="brand-story-media">
+          <div className="brand-story-media reveal-right">
             <img
               src={heritageImage}
               alt="Evaqure Skincare Heritage"
@@ -230,12 +230,12 @@ export const Homepage: React.FC = () => {
 
       {/* Best Sellers */}
       <section className="home-section container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <span className="section-subtitle">Most Coveted</span>
           <h2 className="section-title">House Classics</h2>
         </div>
 
-        <div className="classics-carousel-container">
+        <div className="classics-carousel-container reveal">
           <div
             className="classics-slider-track"
             style={{
@@ -253,7 +253,7 @@ export const Homepage: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="home-section container" style={{ backgroundColor: 'var(--color-bg-offset)', border: 'none' }}>
+      <section className="home-section container reveal" style={{ backgroundColor: 'var(--color-bg-offset)', border: 'none' }}>
         <div className="testimonial-carousel">
           <div className="testimonial-slide">
             <span className="section-subtitle">Patron Reflections</span>
@@ -282,13 +282,13 @@ export const Homepage: React.FC = () => {
       {/* Instagram Gallery */}
       <section className="home-section" style={{ borderBottom: 'none', paddingBottom: 0 }}>
         <div className="container" style={{ marginBottom: 'var(--space-xl)' }}>
-          <div className="section-header" style={{ marginBottom: 'var(--space-lg)' }}>
+          <div className="section-header reveal" style={{ marginBottom: 'var(--space-lg)' }}>
             <span className="section-subtitle">Social Canvas</span>
             <h2 className="section-title">Shared Moments</h2>
           </div>
         </div>
 
-        <div className="moments-marquee-container">
+        <div className="moments-marquee-container reveal">
           <div className="moments-marquee-track">
             {/* First Set of 7 Moments */}
             <div className="moments-marquee-item">
@@ -356,7 +356,7 @@ export const Homepage: React.FC = () => {
       {/* Newsletter Full Banner Section */}
       <section className="newsletter-banner">
         <div className="container">
-          <div className="newsletter-banner-content">
+          <div className="newsletter-banner-content reveal-scale">
             <span className="section-subtitle">Exclusive Society</span>
             <h2>Join the Inner Circle</h2>
             <p>

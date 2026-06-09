@@ -54,7 +54,7 @@ export const ProductDetailPage: React.FC = () => {
       {/* Product Information Main Grid */}
       <div className="product-detail-layout">
         {/* Left Column: Interactive Gallery */}
-        <div className="product-gallery">
+        <div className="product-gallery reveal-left">
           {/* Thumbnails */}
           <div className="gallery-thumbnails">
             {product.images.map((img, index) => (
@@ -75,7 +75,7 @@ export const ProductDetailPage: React.FC = () => {
         </div>
 
         {/* Right Column: Meta details and actions */}
-        <div className="product-info-panel">
+        <div className="product-info-panel reveal-right">
           <div className="product-category-row">
             <span className="product-category-text">{product.category}</span>
             <div className="product-rating-stars">
@@ -90,21 +90,7 @@ export const ProductDetailPage: React.FC = () => {
           <p className="product-detail-desc">{product.description}</p>
 
           <div className="product-actions-panel">
-            {/* Color Selector */}
-            <div className="quick-view-selector-group">
-              <span className="selector-label">Color: {selectedColor}</span>
-              <div className="colors-grid">
-                {product.colors.map((color) => (
-                  <button
-                    key={color.name}
-                    className={`color-option-btn ${selectedColor === color.name ? 'active' : ''}`}
-                    style={{ '--color-option': color.value } as React.CSSProperties}
-                    onClick={() => setSelectedColor(color.name)}
-                    title={color.name}
-                  />
-                ))}
-              </div>
-            </div>
+
 
             {/* Size Selector */}
             {product.sizes && product.sizes.length > 0 && (
@@ -195,7 +181,7 @@ export const ProductDetailPage: React.FC = () => {
       </div>
 
       {/* Reviews Block */}
-      <section className="reviews-section">
+      <section className="reviews-section reveal">
         <div className="reviews-header-block">
           <div>
             <h2 className="section-title" style={{ fontSize: '1.8rem', textAlign: 'left' }}>Patron Reviews</h2>
@@ -232,13 +218,15 @@ export const ProductDetailPage: React.FC = () => {
       </section>
 
       {/* Related Products Grid */}
-      <section className="related-section" style={{ marginTop: 'var(--space-xxl)' }}>
+      <section className="related-section reveal" style={{ marginTop: 'var(--space-xxl)' }}>
         <h2 className="section-title" style={{ fontSize: '1.8rem', marginBottom: 'var(--space-xl)', textAlign: 'center' }}>
           Complementary Curation
         </h2>
         <div className="products-grid-3">
-          {fallbackProducts.map((p) => (
-            <ProductCard key={p.id} product={p} />
+          {fallbackProducts.map((p, index) => (
+            <div key={p.id} className={`reveal reveal-delay-${index + 1}`}>
+              <ProductCard product={p} />
+            </div>
           ))}
         </div>
       </section>
