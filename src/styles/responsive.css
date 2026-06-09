@@ -1,0 +1,30 @@
+/* Responsive Utilities and Helpers */
+
+@media (max-width: 1200px) {
+  :root {
+    --space-huge: calc(var(--space-unit) * 4.5);
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --space-huge: calc(var(--space-unit) * 3.5);
+    --header-height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-huge: calc(var(--space-unit) * 2.5);
+  }
+  
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}

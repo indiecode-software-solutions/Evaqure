@@ -1,0 +1,156 @@
+.contact-page {
+  padding-top: calc(var(--header-height) + var(--space-xl));
+  padding-bottom: var(--space-huge);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-xxl);
+  margin-bottom: var(--space-huge);
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.contact-info-col h1 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1.15;
+  margin-top: var(--space-xxs);
+}
+
+.contact-info-col p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.contact-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.boutique-card {
+  background-color: var(--color-bg-offset);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  padding: var(--space-lg);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+}
+
+.boutique-card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-subtle);
+  transform: translateY(-2px);
+}
+
+.boutique-card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-main);
+  font-family: var(--font-serif);
+}
+
+.boutique-card p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.boutique-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact Form styling */
+.contact-form-col {
+  background-color: var(--color-bg-offset);
+  padding: var(--space-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.contact-form-col h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: var(--space-md);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sharp);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent-dark);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* FAQ Accordion Styling on Contact page */
+.faq-section {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-xxl);
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  font-size: 2rem;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-details-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .boutique-card {
+    padding: var(--space-md);
+  }
+}
